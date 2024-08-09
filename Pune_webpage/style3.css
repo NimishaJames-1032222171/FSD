@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    color: #c3bb26;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lucida Handwriting', cursive; 
+    font-size: 2em; 
+    font-weight: normal; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 20px;
+    gap: 20px; /* Add gap between left-side and right-side */
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.map {
+    margin-bottom: 20px;
+    margin-top: -30px; /* Reduce top margin */
+}
+
+.map iframe {
+    width: 110%;
+    height: 520px;
+    margin-left: -50px;
+    border: 0;
+}
+
+.image {
+    margin-top: -543px; /* Remove top margin */
+    margin-right: -628px;
+    margin-left: 628px;
+}
+
+.image img {
+    width: 110%; /* Increase width of the image */
+    height: 250px; /* Reduce height of the image */
+}
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px; /* Add space between right-side and left-side */
+    margin-top: 10px; /* Reduce top margin */
+}
+
+.info {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 242px; /* Remove top margin */
+    margin-right: -60px;
+    height:40%;
+}
