@@ -1,0 +1,90 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #00203F, #00b09b); /* Darkest blue to green gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: #ffffff; /* White form background for contrast */
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px; /* Keep the width compact */
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #00b09b; /* Green from the gradient */
+    font-size: 26px;
+    font-weight: 600; /* Semi-bold for a stronger heading */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00203F; /* Darkest blue from the gradient */
+    font-size: 14px;
+    text-align: left; /* Left-align the label */
+}
+
+.input-group input {
+    width: calc(100% - 16px); /* Adjusted to account for padding */
+    padding: 1px;
+    border-radius: 8px;
+    border: 2px solid #00b09b; /* Green border to match the theme */
+    background-color: #f0f9ff; /* Light sea-blue for inputs */
+    color: #333; /* Dark text for readability */
+    font-size: 16px;
+    text-align: left; /* Keep text left-aligned */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+.input-group input:focus {
+    border-color: #00b09b; /* Green border on focus */
+    outline: none;
+    background-color: #e0f4ff; /* Slightly darker background on focus */
+}
+
+button {
+    background: linear-gradient(135deg, #00203F, #00b09b); /* Dark blue to green gradient */
+    color: white;
+    padding: 12px; /* Same height as input fields */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%; /* Same width as input fields */
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    box-sizing: border-box; /* Ensure padding is part of button's size */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00b09b, #00203F); /* Reverse gradient on hover */
+}
+
+.error {
+    color: #e63946; /* Bright red for error messages */
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left; /* Align error message to left */
+}
+
+/* Ensure uniformity in input fields and button */
+input, button {
+    width: calc(100% - 16px); /* Uniform width */
+    height: 50px; /* Uniform height */
+}
