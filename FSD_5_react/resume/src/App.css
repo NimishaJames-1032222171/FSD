@@ -1,0 +1,187 @@
+/* General App Styles */
+.App {
+  text-align: center;
+  height: 100vh; /* Full height of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('resume.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  filter: none; /* Remove brightness filter */
+}
+
+/* Other existing styles remain unchanged... */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header Styles */
+.App-header {
+  min-height: 100vh; /* Match background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + 2vmin); /* Reduced font size for headers */
+  color: white;
+}
+
+.App-header h1 {
+  font-size: 2rem; /* Adjust header font size */
+}
+
+.App-header h2 {
+  font-size: 1.5rem; /* Adjust sub-header font size */
+}
+
+.App-link {
+  color: #61dafb; /* Link color */
+}
+
+/* Keyframes for logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Centered Scrollable Box Styles */
+.box {
+  width: 80%; /* 80% of the screen width */
+  max-width: 1000px; /* Maximum width */
+  min-width: 600px; /* Minimum width */
+  max-height: 80vh; /* Limit height */
+  background-color: #ffffff; /* Bright white background for container */
+  padding: 30px; /* Padding for spacing */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  border: 4px solid #32aea1; /* Sea green border (hex code for sea green) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Box Content Styles */
+.box-content {
+  overflow-y: auto; /* Scrollable content */
+  padding-right: 0; /* No extra padding */
+  max-height: 65vh; /* Max height for footer space */
+  color: #111827; /* Darker text */
+  font-size: 0.9rem; /* Reduced font size for content */
+  box-sizing: border-box; /* Padding included in width */
+}
+
+/* Footer Styles */
+.box-footer {
+  display: flex;
+  justify-content: space-between; /* Keep buttons on opposite sides */
+  align-items: center;
+  padding-top: 20px; /* Space above footer */
+  border-top: 1px solid #e5e7eb; /* Top border for separation */
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+  margin-bottom: 20px; /* Space between inputs */
+  width: 100%; /* Full width */
+  padding: 12px; /* Padding for input fields */
+  border: 1px solid #3b82f6; /* Blue border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Reduced font size */
+  color: #111827; /* Text color */
+  resize: vertical; /* Allow vertical resizing */
+  box-sizing: border-box; /* Padding included in width */
+}
+
+input:focus,
+textarea:focus {
+  outline: none; /* No outline */
+  border-color: #2563eb; /* Darker blue border on focus */
+}
+
+/* Navigation Button Styles */
+.nav-button {
+  padding: 12px 24px; /* Button padding */
+  font-size: 14px; /* Reduced font size */
+  background-color: #3b82f6; /* Button color */
+  border: none; /* No border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  color: white; /* Text color */
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.nav-button:disabled {
+  background-color: #9ca3af; /* Disabled color */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: #2563eb; /* Hover color */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.nav-button:active:not(:disabled) {
+  transform: translateY(0); /* Reset effect */
+}
+
+/* Character Count Styles */
+.char-count {
+  font-size: 12px; /* Reduced font size */
+  color: gray; /* Text color */
+  margin-top: 5px; /* Space above */
+}
+
+/* Experience Section Styles */
+.experience-section {
+  margin-bottom: 20px; /* Space between sections */
+}
+
+.add-experience {
+  margin-top: 10px; /* Space above button */
+  padding: 10px 20px; /* Button padding */
+  font-size: 14px; /* Reduced font size */
+  background-color: #61dafb; /* Button color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  color: black; /* Text color */
+}
+
+/* Compact Input Styles */
+.compact-input {
+  width: 100%; /* Full width */
+  padding: 5px; /* Padding */
+  margin: 5px 0; /* Margin */
+  font-size: 12px; /* Reduced font size */
+}
+
+/* Remove Experience Button Styles */
+.remove-experience {
+  margin-top: 10px; /* Space above button */
+  padding: 8px 16px; /* Button padding */
+  font-size: 12px; /* Reduced font size */
+  background-color: #ff4c4c; /* Red color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.remove-experience:disabled {
+  background-color: grey; /* Disabled color */
+  cursor: not-allowed; /* Not allowed cursor */
+}
