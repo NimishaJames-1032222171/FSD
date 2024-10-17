@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #98cdd4, #4c819a); /* Lighter gradient from soft blue to very light blue */
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+        }
+        h1 {
+            margin-bottom: 5px;
+            text-align: center;
+            color: #004d40; /* Darker color for the title */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 24px; /* Adjust this value to reduce the font size */
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 600px; /* Set a maximum width for the container */
+            margin: 40px auto; /* Center the container */
+            background-color: #e0f7fa; /* Lightest blue */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column; /* Align children vertically */
+            justify-content: space-between; /* Space out children */
+            height: 90vh; /* Use full height of viewport */
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #0b7b69; /* Darker blue for labels */
+        }
+        input.form-control {
+            border: 2px solid #0f7160; /* Dark blue border for input fields */
+        }
+        button {
+            width: 100%; /* Make the button the same width as input fields */
+            background-color: #0f7160 !important; /* Default blue color for the button */
+            border: none;
+            color: rgb(238, 233, 233) !important;
+            margin-top: 10px; /* Add some margin above the button */
+            font-size: 16px; /* Increase font size */
+            padding: 10px; /* Add padding for better appearance */
+            border-radius: 5px; /* Slightly rounded corners */
+    
+        }
+        button:hover {
+            background-color: #033336; /* Darker blue on hover */
+        }
+        .form-container {
+            flex-grow: 1; /* Allow form to grow and take available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space out the form fields */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Book</h1>
+        <div class="form-container">
+            <form action="http://localhost:3000/book" method="POST">
+                <div class="form-group">
+                    <label for="ISBN">ISBN</label>
+                    <input class="form-control" name="isbn" required>
+                </div>
+                <div class="form-group">
+                    <label for="Title">Title</label>
+                    <input class="form-control" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="Author">Author</label>
+                    <input class="form-control" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="Published Date">Published Date</label>
+                    <input class="form-control" name="publish_date" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="Publisher">Publisher</label>
+                    <input class="form-control" name="publisher" required>
+                </div>
+                <div class="form-group">
+                    <label for="Number of Pages">Number of Pages</label>
+                    <input class="form-control" name="numOfPages" type="number" required>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

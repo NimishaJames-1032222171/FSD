@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #98cdd4, #4c819a); /* Updated background gradient */
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+            min-height: 100vh; /* Ensures full-screen height */
+            margin: 0; /* Removes default margin */
+            padding: 0; /* Removes default padding */
+            display: flex; /* Centers the container vertically */
+            justify-content: center; /* Centers the container horizontally */
+            align-items: center; /* Centers the container vertically */
+        }
+        h1 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: #004d40; /* Updated title color */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #e0f7fa; /* Updated container color */
+            border: 2px solid #388e3c; /* Added green boundary */
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #388e3c; /* Green border for book detail blocks */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            padding: 15px; /* Added padding inside each card */
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .modal-header {
+            background-color: #00796b; /* Keep modal header color */
+            color: white;
+        }
+        .modal-title {
+            margin: 0 auto;
+        }
+        button {
+            background-color: #0f7160; /* Updated button color for delete */
+            border: none;
+            color: rgb(238, 233, 233) !important; /* White color for button text */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #033336; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+        .form-control {
+            border: 2px solid #0f7160; /* Updated border color for input fields */
+        }
+        .form-control:focus {
+            border-color: #388e3c; /* Focus border color */
+            box-shadow: none; /* Removes default focus shadow */
+        }
+        .btn-container {
+            display: flex; /* Use flexbox for button alignment */
+            justify-content: flex-end; /* Align buttons to the right */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>List of Books</h1>
+        <div class="row" id="books">
+            <!-- Example of a book detail block -->
+            <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-title">Book Title</h5>
+                    <p class="card-text">Author: Author Name</p>
+                    <p class="card-text">ISBN: 123-4567890123</p>
+                    <p class="card-text">Publisher: Publisher Name</p>
+                    <p class="card-text">Pages: 300</p>
+                    <div class="btn-container">
+                        <button class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional book detail blocks will be added here dynamically -->
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div id="editBookModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Book</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editForm" method="POST">
+                        <div class="form-group">
+                            <label for="ISBN">ISBN</label>
+                            <input class="form-control" name="isbn" id="isbn" required> <!-- Removed inline styles -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Title">Title</label>
+                            <input class="form-control" name="title" id="title" required> <!-- Removed inline styles -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Author">Author</label>
+                            <input class="form-control" name="author" id="author" required> <!-- Removed inline styles -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Publisher">Publisher</label>
+                            <input class="form-control" name="publisher" id="publisher" required> <!-- Removed inline styles -->
+                        </div>
+                        <div class="form-group">
+                            <label for="Number of Pages">Number of Pages</label>
+                            <input class="form-control" name="numOfPages" id="numOfPages" type="number" required> <!-- Removed inline styles -->
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="book-list.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
