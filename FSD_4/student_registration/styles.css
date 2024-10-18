@@ -1,0 +1,109 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('back.jpg');
+    background-size: cover;
+    color: #333; /* Default text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px; /* Increased maximum width */
+    width: 90%; /* Allow container to take 90% of the available width */
+    text-align: center;
+    border: 2px solid #4B0082; /* Dark purple border */
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    color: #4B0082; /* Dark purple */
+}
+
+label {
+    display: block; /* Ensure labels are block elements */
+    text-align: left; /* Left align labels */
+    margin-bottom: 5px; /* Spacing between label and input */
+    color: #8A7BCA; /* Light purple for labels */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: calc(100% - 45px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #9254bf; /* Dark purple border for input fields */
+    border-radius: 4px;
+    color: #010005; /* Light purple for input text */
+}
+
+input[type="submit"] {
+    background-color: #4B0082; /* Dark purple */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: calc(100% - 20px); /* Match width of other input fields */
+}
+
+input[type="submit"]:hover {
+    background-color: #3E0075; /* Darker purple on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+a {
+    color: #4B0082; /* Dark purple for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.view-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Increased maximum width */
+    width: 90%; /* Allow container to take 90% of the available width */
+    text-align: center;
+}
+h2 {
+    margin: 0 0 30px 0; /* Increase space after headers */
+    color: #4B0082; /* Dark purple */
+}
+
+input[type="submit"] {
+    width: calc(100% - 20px); /* Ensure submit button has the same width as input fields */
+    background-color: #4B0082; /* Dark purple */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Match padding to input fields */
+}
+
+input[type="submit"]:hover {
+    background-color: #3E0075; /* Darker purple on hover */
+}
