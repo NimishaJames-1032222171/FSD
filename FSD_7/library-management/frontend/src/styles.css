@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('image.png'); /* Add your image URL */
+    background-size: cover;
+    color: rgb(2, 95, 83);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-repeat: no-repeat; /* Prevent background image repetition */
+    background-position: center; /* Center the background image */
+}
+
+.container {
+    background-color: white; /* Solid white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    max-width: 500px; /* Maximum width for the container */
+    width: 100%; /* Ensure the container is responsive */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content inside the container */
+    border: 2px solid rgb(2, 95, 83); /* Dark green border */
+}
+
+input {
+    width: 95%; /* Full width of the container */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+button {
+    width: 100%; /* Full width */
+    background-color: rgb(2, 95, 83); /* Dark green background */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: rgb(1, 48, 42); /* Darker blue on hover (consider changing this too) */
+}
+
+table {
+    width: 100%; /* Full width table */
+    margin-top: 20px;
+    border-collapse: collapse; /* Merge table borders */
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(2, 95, 83); /* Dark green background for header */
+    color: white; /* White text for the header */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey for even rows */
+}

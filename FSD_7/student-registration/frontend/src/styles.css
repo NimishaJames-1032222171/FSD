@@ -1,0 +1,133 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('back.jpg'); /* Add your image path here */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Centered Container */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Maximum width of the card */
+    width: 100%; /* Full width on smaller screens */
+    text-align: center;
+    border: 2px solid #003366; /* Dark blue border */
+}
+
+h2 {
+    color: #003366; /* Dark blue */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+input:focus {
+    border-color: #003366; /* Dark blue border on focus */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    background-color: #13518f; /* Dark blue */
+    color: white;
+    padding: 12px;
+    border: 2px solid #13518f; /* Dark blue border */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #001f40; /* Slightly lighter blue on hover */
+    border-color: #001f40; /* Change border color on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action Button Styles */
+button.action-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+button.action-btn.update {
+    background-color: #28a745; /* Green for update */
+}
+
+button.action-btn.delete {
+    background-color: #dc3545; /* Red for delete */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .card,
+    table {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    button,
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
